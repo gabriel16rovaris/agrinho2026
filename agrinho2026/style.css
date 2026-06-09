@@ -1,0 +1,177 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --verde-escuro: #2e7d32;
+    --verde-claro: #4caf50;
+    --marrom: #795548;
+    --bege: #f1f8e9;
+    --branco: #ffffff;
+    --sombra: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body {
+    background-color: var(--bege);
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--branco);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+.destaque { color: var(--marrom); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--verde-claro); }
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); /* Imagem de fazenda livre */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--branco);
+    margin-top: 60px;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.verde { color: #a5d6a7; }
+
+.btn-main {
+    padding: 12px 30px;
+    background-color: var(--verde-claro);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-main:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-3px);
+}
+
+/* Práticas */
+.praticas {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.praticas h2 {
+    color: var(--verde-escuro);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+    width: 300px;
+    transition: 0.3s;
+    border-bottom: 5px solid var(--verde-claro);
+}
+
+.card:hover { transform: translateY(-10px); }
+.card h3 { color: var(--marrom); margin-bottom: 10px; }
+
+/* Calculadora */
+.calculadora {
+    background-color: var(--verde-escuro);
+    padding: 4rem 10%;
+    text-align: center;
+    color: white;
+}
+
+.calc-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    display: inline-block;
+    backdrop-filter: blur(5px);
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.btn-calc {
+    padding: 10px 20px;
+    background-color: var(--marrom);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #f1f8e9;
+    color: var(--verde-escuro);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
